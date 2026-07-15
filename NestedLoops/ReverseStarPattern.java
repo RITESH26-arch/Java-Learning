@@ -6,6 +6,6 @@ public class ReverseStarPattern {
             } 
             System.out.println();
         }
-    
+      
     }
 }
