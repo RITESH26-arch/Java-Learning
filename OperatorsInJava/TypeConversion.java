@@ -9,7 +9,7 @@ public class TypeConversion {
         double pricetwo = priceone;
         System.out.println(pricetwo);
 
-        /* Implicit Type conversion from higher data type to lower data type in the chain */
+        /* explicit Type conversion from higher data type to lower data type in the chain */
         double ExactAge = 24.234;
         int StandardAge = (int) ExactAge;
         System.out.println(StandardAge);
