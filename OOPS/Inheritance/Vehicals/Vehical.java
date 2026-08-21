@@ -12,7 +12,7 @@ public class Vehical {
         else
             this.noOfDoors = noOfDoors;
     }
-    
+
     Vehical(String brand,int noOfDoors){
         setBrand(brand);
         setNoOfDoors(noOfDoors);
@@ -28,6 +28,10 @@ public class Vehical {
 
     void Display(){
         System.out.println("\nBrand => " + brand + "\nNumber of Doors => " + noOfDoors);
+    }
+
+    int getNoOfDoors(){
+        return noOfDoors;
     }
 
 }

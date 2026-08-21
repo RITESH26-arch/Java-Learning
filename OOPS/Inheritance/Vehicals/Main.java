@@ -53,7 +53,13 @@ public class Main {
         c1.Display();
         }
         
+
+        Vehical v = new Car("Honda",4,"Civic");
+        v.Display();
+        v.getNoOfDoors();
         sc.close();
+
+    
 
     }
 }

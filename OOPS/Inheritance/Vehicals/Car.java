@@ -52,5 +52,8 @@ public class Car extends Vehical {
         super.Display();
         System.out.println("Name => " + name + "\nType => " + type + "\nCar number => " +carNumber);
     }
+
+    
+    
     
 }
