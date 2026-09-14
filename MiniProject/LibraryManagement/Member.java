@@ -3,8 +3,9 @@ abstract class Member {
     private String memberName;
 
     abstract double calculateFine();
+    abstract int maxBookAllowed();
 
-    void displayiMemberInfo(){
+    void displayMemberInfo(){
         System.out.println("\nMember Id => " + memberId + "\nMember Name => " + memberName);
     }
 
@@ -15,6 +16,10 @@ abstract class Member {
         else{
             this.memberId = memberId;
         }
+    }
+
+    void getMemberId(){
+        System.out.println(memberId);
     }
 
     void setMemberName(String memberName){
@@ -35,6 +40,10 @@ abstract class Member {
             else{
                 System.out.println("Digits are not allowed in the name !");
             }
+    }
+
+    void getMemberName(){
+        System.out.println(memberName);
     }
 
     Member(int memberId,String memberName){
