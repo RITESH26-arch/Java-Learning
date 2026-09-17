@@ -1,9 +1,9 @@
 abstract class Member {
-    private int memberId;
+    private int memberId,maxBookAllowed;
     private String memberName;
 
     abstract double calculateFine();
-    abstract int maxBookAllowed();
+    
 
     void displayMemberInfo(){
         System.out.println("\nMember Id => " + memberId + "\nMember Name => " + memberName);
@@ -46,9 +46,21 @@ abstract class Member {
         System.out.println(memberName);
     }
 
-    Member(int memberId,String memberName){
+    void setMaxBookAllowed(int maxBookAllowed){
+        if(maxBookAllowed > 0 && maxBookAllowed <= 10)
+            this.maxBookAllowed = maxBookAllowed;
+        else
+             System.out.println("\nMaximum books allowed is 10  \nMinimum books allowed is 1");
+    }
+
+    int getMaxBookAllowed(){
+        return maxBookAllowed;
+    }
+
+    Member(int memberId,String memberName,int maxBookAllowed){
         setMemberID(memberId);
         setMemberName(memberName);
+        setMaxBookAllowed(maxBookAllowed);
     }
     
 }

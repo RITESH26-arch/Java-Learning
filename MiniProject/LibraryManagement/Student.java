@@ -33,7 +33,7 @@ public class Student extends Member {
     }
 
     Student(int memberId,String memberName,int issueDate,int bookSubmittingDate,String month,String bookName){
-        super(memberId,memberName);
+        super(memberId,memberName,3);
         setIssueDate(issueDate);
         setBookSubmittingDate(bookSubmittingDate);
         setMonth(month);
@@ -51,20 +51,13 @@ public class Student extends Member {
                 System.out.print("\nNo Fine !");    
         return fine;
     }
-
-    @Override 
-    int maxBookAllowed(){
-        int maxBookAllowed = 3;
-        return maxBookAllowed;
-    }
-
     
 
     @Override 
     public void displayMemberInfo(){
         super.displayMemberInfo();
-        System.out.println( "\nBook Name => " + bookName + "\nNo.of Books => " + noOfBooks + 
-        "\nMax Books allowed to issue => " + maxBookAllowed() + " Books" +
+        System.out.println( "\nBook Name => " + bookName + "\nNo.of Books => " + noOfBooks + "\nBook Name => " + bookName + "\nNo.of Books => " + noOfBooks +
+        "\nMax Book Alloowed => " + getMaxBookAllowed()+
         "\nBook issued date => " + issueDate + "\nBook return due date => " + daysOverDue + 
         "\nBook returning date => " 
         + bookSubmittingDate + "\nFine => " + fine + "Rs" + "\nMonth => " + month);

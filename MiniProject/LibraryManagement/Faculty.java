@@ -41,7 +41,7 @@ public class Faculty extends Member{
     }
 
     Faculty(int memberId,String memberName,String departmentName,String designation,int issueDate,int bookSubmittingDate,String month,String bookName){
-        super(memberId,memberName);
+        super(memberId,memberName,10);
         setDepartmentName(departmentName);
         setDesignation(designation);
         setIssueDate(issueDate);
@@ -61,17 +61,12 @@ public class Faculty extends Member{
         return fine;
     }
 
-    @Override
-    int maxBookAllowed(){
-        int maxBookAllowed = 10;
-        return maxBookAllowed;
-    }
 
     @Override 
     public void displayMemberInfo(){
         super.displayMemberInfo();
-        System.out.println("\nDepartment => " + departmentName + "\nDesignation => " + designation + "\nBook Name => " + bookName + "\nNo.of Books => " + noOfBooks + 
-        "\nMax Books allowed to issue => " + maxBookAllowed() + " Books" +
+        System.out.println("\nDepartment => " + departmentName + "\nDesignation => " + designation + 
+        "\nBook Name => " + bookName + "\nNo.of Books => " + noOfBooks + "\nMax Book Alloowed => " + getMaxBookAllowed() +
         "\nBook issued date => " + issueDate + "\nBook return due date => " + daysOverDue + 
         "\nBook returning date => " 
         + bookSubmittingDate + "\nFine => " + fine + "Rs" + "\nMonth => " + month);
