@@ -32,7 +32,7 @@ public class Main {
             month = sc.nextLine();
 
             Student s1 = new Student(memberId, memberName, issueDate, bookSubmittingDate, month, bookName);
-            s1.calculateFine();
+            s1.returnBook(bookSubmittingDate);
             s1.displayMemberInfo();
 
         }
@@ -65,10 +65,8 @@ public class Main {
             System.out.println("\nEnter the month => ");
             month = sc.nextLine();
 
-
-
             Faculty f1 = new Faculty(memberId, memberName,department,designation, issueDate, bookSubmittingDate, month, bookName);
-            f1.calculateFine();
+            f1.returnBook(bookSubmittingDate);
             f1.displayMemberInfo();
         
         }
