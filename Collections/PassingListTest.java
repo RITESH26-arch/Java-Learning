@@ -15,9 +15,11 @@ public class PassingListTest {
         PassingLists.addInList(markList);
         System.out.println("\nAfter calling method : " + markList);
 
-        RemoveBelow40.removeElement(markList);
+        RemoveWithIterator.removeWithIterator(markList);
 
-        RemoveBelow40.removeByForEach(markList); // this returns an error as the  remove changes the list  and the foreach checks the iterator befor going to the next value
+        //RemoveBelow40.removeElement(markList);
+
+       /// RemoveBelow40.removeByForEach(markList); // this returns an error as the  remove changes the list  and the foreach checks the iterator befor going to the next value
 
 
     }
